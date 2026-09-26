@@ -8,7 +8,7 @@
 <body>
     <script>
         const params = new URLSearchParams(location.search);
-        window.recordId = params.get('rid');
+        const recordId = params.get('rid');
 
         (function(I,n,f,o,b,i,p){
         I[b]=I[b]||function(){(I[b].q=I[b].q||[]).push(arguments)};
@@ -16,7 +16,20 @@
         p=n.getElementsByTagName(f)[0];p.parentNode.insertBefore(i,p)})
         (window,document,'script','https://livechat.infobip.com/widget.js','liveChat');
 
-        liveChat('init', '18780c73-4ea9-4ab6-9b16-32cf5985c480');
+        liveChat('init', '18780c73-4ea9-4ab6-9b16-32cf5985c480', (error) => {
+            if (error) {
+                console.log('Live Chat init error:', error);
+                return;
+            }
+
+            if (recordId) {
+                liveChat('send', {
+                    type: 'CUSTOM_DATA',
+                    customData: { documentRecordId: recordId },
+                    userMessage: ''
+                });
+            }
+        });
 
     </script>
 </body>
