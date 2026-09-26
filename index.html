@@ -19,14 +19,17 @@
         liveChat('init', '18780c73-4ea9-4ab6-9b16-32cf5985c480');
 
         liveChat('on', 'CONVERSATION_OPENED', function() {
-        if (recordId) {
-            liveChat('send', {
-                type: 'CUSTOM_DATA',
-                customData: { documentRecordId: recordId },
-                userMessage: ''
-            });
-        }
-    });
+            if (recordId) {
+                console.log('Sending recordId:', recordId);
+                liveChat('send', {
+                    type: 'CUSTOM_DATA',
+                    customData: { documentRecordId: recordId },
+                    userMessage: ''
+                }, function(err, res) {
+                    console.log('Send callback:', err, res);
+                });
+            }
+        });
 
     </script>
 </body>
