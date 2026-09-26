@@ -16,20 +16,17 @@
         p=n.getElementsByTagName(f)[0];p.parentNode.insertBefore(i,p)})
         (window,document,'script','https://livechat.infobip.com/widget.js','liveChat');
 
-        liveChat('init', '18780c73-4ea9-4ab6-9b16-32cf5985c480', (error) => {
-            if (error) {
-                console.log('Live Chat init error:', error);
-                return;
-            }
+        liveChat('init', '18780c73-4ea9-4ab6-9b16-32cf5985c480');
 
-            if (recordId) {
-                liveChat('send', {
-                    type: 'CUSTOM_DATA',
-                    customData: { documentRecordId: recordId },
-                    userMessage: ''
-                });
-            }
-        });
+        liveChat('on', 'CONVERSATION_OPENED', function() {
+        if (recordId) {
+            liveChat('send', {
+                type: 'CUSTOM_DATA',
+                customData: { documentRecordId: recordId },
+                userMessage: ''
+            });
+        }
+    });
 
     </script>
 </body>
