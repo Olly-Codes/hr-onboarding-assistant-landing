@@ -7,9 +7,6 @@
 </head>
 <body>
     <script>
-        const params = new URLSearchParams(location.search);
-        const recordId = params.get('rid');
-
         (function(I,n,f,o,b,i,p){
         I[b]=I[b]||function(){(I[b].q=I[b].q||[]).push(arguments)};
         I[b].t=1*new Date();i=n.createElement(f);i.async=1;i.src=o;
@@ -17,13 +14,6 @@
         (window,document,'script','https://livechat.infobip.com/widget.js','liveChat');
 
         liveChat('init', '18780c73-4ea9-4ab6-9b16-32cf5985c480');
-
-        if (recordId) {
-            liveChat('send', {
-                type: 'BASIC',
-                message: '__RID__:' + recordId
-            });
-        }
     </script>
 </body>
 </html>
