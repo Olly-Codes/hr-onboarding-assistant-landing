@@ -15,25 +15,25 @@
 
         liveChat('init', '18780c73-4ea9-4ab6-9b16-32cf5985c480');
 
-        const rid = new URLSearchParams(window.location.search).get("rid");
+        // const rid = new URLSearchParams(window.location.search).get("rid");
 
-        if (rid) {
-            fetch(`https://hr-onboarding-form.onrender.com/chat-token?rid=${encodeURIComponent(rid)}`)
-            .then((response) => {
-                if (!response.ok) throw new Error("Token request failed");
-                return response.json();
-            })
-            .then(({ token }) => {
-                liveChat("auth", token, (error) => {
-                if (error) {
-                    console.error("Chat authentication failed:", error);
-                    return;
-                }
-                liveChat("show");
-                });
-            })
-            .catch((error) => console.error(error));
-        }
+        // if (rid) {
+        //     fetch(`https://hr-onboarding-form.onrender.com/chat-token?rid=${encodeURIComponent(rid)}`)
+        //     .then((response) => {
+        //         if (!response.ok) throw new Error("Token request failed");
+        //         return response.json();
+        //     })
+        //     .then(({ token }) => {
+        //         liveChat("auth", token, (error) => {
+        //         if (error) {
+        //             console.error("Chat authentication failed:", error);
+        //             return;
+        //         }
+        //         liveChat("show");
+        //         });
+        //     })
+        //     .catch((error) => console.error(error));
+        // }
     </script>
 </body>
 </html>
