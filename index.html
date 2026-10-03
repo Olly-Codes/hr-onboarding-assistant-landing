@@ -17,7 +17,10 @@
 
         const rid = new URLSearchParams(window.location.search).get("rid");
         if (rid) {
-            liveChat("send_contextual_data", { metadata: { rid } });
+            liveChat("show");
+            liveChat("send", { type: "BASIC", message: rid }, (error) => {
+            if (error) console.error("Could not send rid:", error);
+            });
         }
     </script>
 </body>
