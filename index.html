@@ -1,39 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HR Onboarding Assistant - Landing</title>
-</head>
-<body>
-    <script>
-        (function(I,n,f,o,b,i,p){
-        I[b]=I[b]||function(){(I[b].q=I[b].q||[]).push(arguments)};
-        I[b].t=1*new Date();i=n.createElement(f);i.async=1;i.src=o;
-        p=n.getElementsByTagName(f)[0];p.parentNode.insertBefore(i,p)})
-        (window,document,'script','https://livechat.infobip.com/widget.js','liveChat');
-
-        liveChat('init', '18780c73-4ea9-4ab6-9b16-32cf5985c480');
-
-        // const rid = new URLSearchParams(window.location.search).get("rid");
-
-        // if (rid) {
-        //     fetch(`https://hr-onboarding-form.onrender.com/chat-token?rid=${encodeURIComponent(rid)}`)
-        //     .then((response) => {
-        //         if (!response.ok) throw new Error("Token request failed");
-        //         return response.json();
-        //     })
-        //     .then(({ token }) => {
-        //         liveChat("auth", token, (error) => {
-        //         if (error) {
-        //             console.error("Chat authentication failed:", error);
-        //             return;
-        //         }
-        //         liveChat("show");
-        //         });
-        //     })
-        //     .catch((error) => console.error(error));
-        // }
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hr-onboarding-assistant-landing</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
