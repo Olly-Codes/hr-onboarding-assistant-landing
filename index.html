@@ -4,10 +4,152 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hr-onboarding-assistant-landing</title>
+    <title>Welcome to HRAutomationLabs </title>
+    <meta
+      name="description"
+      content="Complete your HRAutomationLabs  onboarding in one chat"
+    />
   </head>
   <body>
-    <div id="app"></div>
+    <header class="nav">
+      <a class="brand" href="#top">HRAutomationLabs </a>
+      <nav>
+        <a href="#journey">Your journey</a>
+        <a href="#expect">What to expect</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main id="top">
+
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Welcome aboard. Let’s get you set up.</h1>
+          <p>
+            Your onboarding assistant walks you through your offer letter,
+            contract and company policies in one chat.
+          </p>
+          <div class="hero-actions">
+            <button type="button" data-open-chat>Start onboarding chat</button>
+            <a class="button secondary" href="#journey">See how it works</a>
+          </div>
+        </div>
+
+        <div class="chat-preview" aria-hidden="true">
+          <div class="chat-head">
+            <span class="dot"></span>
+            Onboarding Assistant
+          </div>
+          <div class="bubble bot">
+            Hi! I’m your onboarding assistant. How would you like to verify
+            it’s you: email or phone?
+          </div>
+          <div class="bubble user">Email</div>
+          <div class="bubble bot">
+            Thanks. Your offer letter is ready. Shall I send you the link now?
+          </div>
+        </div>
+      </section>
+
+      <!-- Journey -->
+      <section class="section" id="journey">
+        <h2>Your onboarding journey</h2>
+        <ol class="steps">
+          <li>
+            <h3>Sign your offer letter</h3>
+            <p>Review the offer and sign it securely without leaving the chat.</p>
+          </li>
+          <li>
+            <h3>Sign your employment contract</h3>
+            <p>
+              Sign the contract. Your manager countersigns, then we email you a
+              link back to the chat.
+            </p>
+          </li>
+          <li>
+            <h3>Read and sign company policies</h3>
+            <p>All policy documents come in one signing session.</p>
+          </li>
+          <li>
+            <h3>Share your feedback</h3>
+            <p>Finish with a short survey about your onboarding experience.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section" id="expect">
+        <h2>What to expect</h2>
+        <dl class="expect">
+          <div>
+            <dt>One place for everything</dt>
+            <dd>
+              No forms to hunt down. The assistant tells you what’s next and
+              gives you each document when it’s time.
+            </dd>
+          </div>
+          <div>
+            <dt>Secure signing</dt>
+            <dd>
+              Documents are signed through DocuSign, so you get a signed copy
+              you can keep.
+            </dd>
+          </div>
+          <div>
+            <dt>Pick up where you left off</dt>
+            <dd>
+              Waiting on your manager? Close the page. We’ll email you a link
+              when it’s your turn again.
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="section" id="faq">
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <details>
+            <summary>How do I start?</summary>
+            <p>
+              Select “Start onboarding chat”. The assistant asks you to verify
+              yourself with your email or phone number, then takes you to your
+              next step.
+            </p>
+          </details>
+          <details>
+            <summary>Which email or phone number should I use?</summary>
+            <p>
+              Use the ones HR has on file for you, usually the email that
+              received your welcome message.
+            </p>
+          </details>
+          <details>
+            <summary>Do I need to create an account?</summary>
+            <p>No. Verifying yourself in the chat is all you need.</p>
+          </details>
+          <details>
+            <summary>Who do I contact if something goes wrong?</summary>
+            <p>
+              Email <a href="mailto:hr@HRAutomationLabs .example">hr@HRAutomationLabs .example</a>
+              and the HR team will help.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 HRAutomationLabs.</p>
+    </footer>
+
+    <script>
+      (function(I,n,f,o,b,i,p){
+        I[b]=I[b]||function(){(I[b].q=I[b].q||[]).push(arguments)};
+        I[b].t=1*new Date();i=n.createElement(f);i.async=1;i.src=o;
+        p=n.getElementsByTagName(f)[0];p.parentNode.insertBefore(i,p)})
+        (window,document,'script','https://livechat.infobip.com/widget.js','liveChat');
+
+        liveChat('init', '18780c73-4ea9-4ab6-9b16-32cf5985c480');
+    </script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
