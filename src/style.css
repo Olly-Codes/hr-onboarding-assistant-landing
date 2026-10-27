@@ -1,0 +1,353 @@
+:root {
+  --accent: dodgerblue;
+  --accent-dark: #1873cc;
+  --ink: #1e293b;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --bg: #f1f5f9;
+  --card: #ffffff;
+  --shadow: 0 1px 3px rgba(15, 23, 42, 0.08), 0 4px 16px rgba(15, 23, 42, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent-dark);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Navigation ---------- */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--card);
+  box-shadow: 0 1px 0 var(--line), 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav nav {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.nav nav a {
+  padding: 0.4rem 0.9rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+
+.nav nav a:hover {
+  background: #eaf4ff;
+}
+
+/* ---------- Buttons ---------- */
+
+button,
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  border: 2px solid var(--accent);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+
+button:hover,
+.button:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+.button.secondary {
+  color: var(--accent-dark);
+  background: transparent;
+  border-color: var(--accent-dark);
+}
+
+.button.secondary:hover {
+  color: #fff;
+  background: var(--accent-dark);
+}
+
+button:focus-visible,
+.button:focus-visible,
+summary:focus-visible,
+.nav a:focus-visible {
+  outline: 3px solid var(--accent-dark);
+  outline-offset: 2px;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 3rem;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 8rem 1.5rem 5rem;
+}
+
+.hero h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+}
+
+.hero p {
+  max-width: 34rem;
+  margin: 0 0 2rem;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Static preview of the conversation */
+.chat-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.chat-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.75rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--line);
+}
+
+.dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+.bubble {
+  max-width: 85%;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.95rem;
+}
+
+.bubble.bot {
+  align-self: flex-start;
+  background: var(--bg);
+}
+
+.bubble.user {
+  align-self: flex-end;
+  color: #fff;
+  background: var(--accent);
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+}
+
+.section h2 {
+  margin: 0 0 1.5rem;
+  font-size: 1.75rem;
+}
+
+/* Journey: a real sequence, so numbered */
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 1.75rem 3.5rem;
+  counter-increment: step;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+}
+
+.steps li::after {
+  content: "";
+  position: absolute;
+  left: 1.1rem;
+  top: 2.5rem;
+  bottom: 0.25rem;
+  width: 2px;
+  background: var(--line);
+}
+
+.steps li:last-child {
+  padding-bottom: 0;
+}
+
+.steps li:last-child::after {
+  display: none;
+}
+
+.steps h3 {
+  margin: 0.15rem 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.steps p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* What to expect */
+.expect {
+  margin: 0;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.expect > div {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.expect > div:last-child {
+  border-bottom: 0;
+}
+
+.expect dt {
+  font-weight: 700;
+}
+
+.expect dd {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+/* FAQ */
+.faq details {
+  background: var(--card);
+  box-shadow: var(--shadow);
+  margin-bottom: 0.75rem;
+}
+
+.faq summary {
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq details[open] summary {
+  border-bottom: 1px solid var(--line);
+  color: var(--accent-dark);
+}
+
+.faq details p {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  color: var(--muted);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--muted);
+  background: var(--card);
+  border-top: 1px solid var(--line);
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 6rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav nav a:not(:last-child) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
