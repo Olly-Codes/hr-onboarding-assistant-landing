@@ -2,17 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to HRAutomationLabs </title>
+    <title>Welcome to HRAutomationLabs</title>
     <meta
       name="description"
-      content="Complete your HRAutomationLabs  onboarding in one chat"
+      content="Complete your HRAutomationLabs onboarding in one chat: sign your documents and get answers."
     />
   </head>
   <body>
     <header class="nav">
-      <a class="brand" href="#top">HRAutomationLabs </a>
+      <a class="brand" href="#top">
+        <span class="logo">
+          <img src="./src/assets/HRAuto-logo.png" width="20" height="20" alt="">
+        </span>
+        <span class="brand-name">HRAutomationLabs</span>
+      </a>
       <nav>
         <a href="#journey">Your journey</a>
         <a href="#expect">What to expect</a>
@@ -21,13 +26,13 @@
     </header>
 
     <main id="top">
-
       <section class="hero">
         <div class="hero-text">
           <h1>Welcome aboard. Let’s get you set up.</h1>
           <p>
             Your onboarding assistant walks you through your offer letter,
-            contract and company policies in one chat.
+            contract and company policies in one chat, and answers questions
+            along the way.
           </p>
           <div class="hero-actions">
             <button type="button" data-open-chat>Start onboarding chat</button>
@@ -38,8 +43,10 @@
         <div class="chat-preview" aria-hidden="true">
           <div class="chat-head">
             <span class="dot"></span>
-            Onboarding Assistant
+            <span>Onboarding Assistant</span>
+            <span class="badge">Step 1 of 4</span>
           </div>
+          <div class="progress"><span style="width: 25%"></span></div>
           <div class="bubble bot">
             Hi! I’m your onboarding assistant. How would you like to verify
             it’s you: email or phone?
@@ -51,26 +58,49 @@
         </div>
       </section>
 
-      <!-- Journey -->
       <section class="section" id="journey">
         <h2>Your onboarding journey</h2>
         <ol class="steps">
-          <li>
+          <li class="step tone-blue">
+            <div class="step-head">
+              <span class="tile">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" x2="8" y1="13" y2="13" /><line x1="16" x2="8" y1="17" y2="17" /></svg>
+              </span>
+              <span class="badge">Step 1</span>
+            </div>
             <h3>Sign your offer letter</h3>
             <p>Review the offer and sign it securely without leaving the chat.</p>
           </li>
-          <li>
+          <li class="step tone-indigo">
+            <div class="step-head">
+              <span class="tile">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" /></svg>
+              </span>
+              <span class="badge">Step 2</span>
+            </div>
             <h3>Sign your employment contract</h3>
             <p>
               Sign the contract. Your manager countersigns, then we email you a
               link back to the chat.
             </p>
           </li>
-          <li>
+          <li class="step tone-amber">
+            <div class="step-head">
+              <span class="tile">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>
+              </span>
+              <span class="badge">Step 3</span>
+            </div>
             <h3>Read and sign company policies</h3>
             <p>All policy documents come in one signing session.</p>
           </li>
-          <li>
+          <li class="step tone-green">
+            <div class="step-head">
+              <span class="tile">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
+              </span>
+              <span class="badge">Step 4</span>
+            </div>
             <h3>Share your feedback</h3>
             <p>Finish with a short survey about your onboarding experience.</p>
           </li>
@@ -79,29 +109,44 @@
 
       <section class="section" id="expect">
         <h2>What to expect</h2>
-        <dl class="expect">
-          <div>
-            <dt>One place for everything</dt>
-            <dd>
-              No forms to hunt down. The assistant tells you what’s next and
-              gives you each document when it’s time.
-            </dd>
-          </div>
-          <div>
-            <dt>Secure signing</dt>
-            <dd>
-              Documents are signed through DocuSign, so you get a signed copy
-              you can keep.
-            </dd>
-          </div>
-          <div>
-            <dt>Pick up where you left off</dt>
-            <dd>
-              Waiting on your manager? Close the page. We’ll email you a link
-              when it’s your turn again.
-            </dd>
-          </div>
-        </dl>
+        <ul class="expect">
+          <li class="tone-blue">
+            <span class="tile">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1" /><rect width="7" height="5" x="14" y="3" rx="1" /><rect width="7" height="9" x="14" y="12" rx="1" /><rect width="7" height="5" x="3" y="16" rx="1" /></svg>
+            </span>
+            <div>
+              <h3>One place for everything</h3>
+              <p>
+                No forms to hunt down. The assistant tells you what’s next and
+                gives you each document when it’s time.
+              </p>
+            </div>
+          </li>
+          <li class="tone-green">
+            <span class="tile">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+            </span>
+            <div>
+              <h3>Secure signing</h3>
+              <p>
+                Documents are signed through DocuSign, so you get a signed copy
+                you can keep.
+              </p>
+            </div>
+          </li>
+          <li class="tone-indigo">
+            <span class="tile">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+            </span>
+            <div>
+              <h3>Pick up where you left off</h3>
+              <p>
+                Waiting on your manager? Close the page. We’ll email you a link
+                when it’s your turn again.
+              </p>
+            </div>
+          </li>
+        </ul>
       </section>
 
       <section class="section" id="faq">
@@ -129,7 +174,7 @@
           <details>
             <summary>Who do I contact if something goes wrong?</summary>
             <p>
-              Email <a href="mailto:hr@HRAutomationLabs .example">hr@HRAutomationLabs .example</a>
+              Email <a href="mailto:hr@hrautomationlabs.example">hr@hrautomationlabs.example</a>
               and the HR team will help.
             </p>
           </details>
@@ -138,7 +183,7 @@
     </main>
 
     <footer class="footer">
-      <p>© 2026 HRAutomationLabs.</p>
+      <p>© 2026 HRAutomationLabs</p>
     </footer>
 
     <script>
