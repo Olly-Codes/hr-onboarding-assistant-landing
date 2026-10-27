@@ -158,7 +158,6 @@ summary:focus-visible,
   padding: 1.25rem;
   background: var(--card);
   box-shadow: var(--shadow);
-  border-top: 4px solid var(--accent);
 }
 
 .chat-head {
