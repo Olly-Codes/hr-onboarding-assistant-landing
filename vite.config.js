@@ -1,6 +1,14 @@
 import { defineConfig } from 'vite'
+import { resolve } from 'path'
 
-// GitHub Pages serves the site from /<repo-name>/, so assets need this base.
 export default defineConfig({
   base: '/hr-onboarding-assistant-landing/',
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        thankYou: resolve(__dirname, 'thank-you.html'),
+      },
+    },
+  },
 })

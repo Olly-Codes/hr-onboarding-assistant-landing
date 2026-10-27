@@ -1,0 +1,9 @@
+/* Thank-you page styles.
+   Shared variables (--accent, --ink, --muted, etc.) come from style.css.
+
+   The only rule here keeps the content from hiding under the fixed nav.
+   Everything else (the tick, the heading, the text, the layout) is yours to style. */
+
+.thank-you {
+  padding-top: 5rem;
+}
