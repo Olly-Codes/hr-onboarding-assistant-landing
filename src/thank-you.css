@@ -1,9 +1,38 @@
 /* Thank-you page styles.
-   Shared variables (--accent, --ink, --muted, etc.) come from style.css.
-
-   The only rule here keeps the content from hiding under the fixed nav.
-   Everything else (the tick, the heading, the text, the layout) is yours to style. */
+   Shared variables (--accent, --ink, --muted, etc.) come from style.css. */
 
 .thank-you {
-  padding-top: 5rem;
+  width: calc(100% - 2rem);
+  max-width: 30rem;
+  margin: 7rem auto 3rem;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.tick {
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.25rem;
+  font-size: 2rem;
+  line-height: 1;
+  color: #15803d;
+  background: #dcfce7;
+  border-radius: 50%;
+}
+
+.thank-you h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.thank-you p {
+  max-width: 24rem;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--muted);
 }
