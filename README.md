@@ -5,7 +5,7 @@ The landing page for the **HR Onboarding and Compliance Automation** project. Ne
 **Live:** https://olly-codes.github.io/hr-onboarding-assistant-landing/
 
 ## Landing page & chat widget
-<img width="1920" height="957" alt="Welcome to HRAutomationLabs" src="https://github.com/user-attachments/assets/81716c35-05d1-43d4-8a31-e2fdd82094f7" />
+<img width="1920" height="957" alt="Welcome to HRAutomationLabs" src="https://github.com/user-attachments/assets/bb295b55-d08e-4c04-ba30-2ffddfd9b051" />
 
 
 ## Pages
